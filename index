@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Portfolio</title>
+    <style>
+        /* Modern Minimalist Styling */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #ffffff;
+            padding: 20px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1a1a1a;
+        }
+
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #666;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #0070f3;
+        }
+
+        .hero {
+            padding: 100px 10%;
+            text-align: center;
+            background: linear-gradient(135deg, #ffffff 0%, #eceff1 100%);
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #0070f3;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #0051b3;
+        }
+
+        section {
+            padding: 80px 10%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 4px;
+            background-color: #0070f3;
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        /* Grid layouts for Skills and Portfolio */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .portfolio-image {
+            width: 100%;
+            height: 200px;
+            background-color: #e0e0e0;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888;
+            font-weight: 500;
+        }
+
+        footer {
+            background-color: #1a1a1a;
+            color: #aeaeae;
+            text-align: center;
+            padding: 40px 10%;
+            font-size: 14px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header { flex-direction: column; gap: 15px; }
+            nav a { margin: 0 10px; }
+            .hero h1 { font-size: 36px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">My Portfolio</div>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#work">Work</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="about">
+        <h1>Hi, I'm a Creative Professional</h1>
+        <p>I specialize in multimedia design, visual storytelling, and building clean digital experiences. Welcome to my space.</p>
+        <a href="#contact" class="btn">Get In Touch</a>
+    </section>
+
+    <section id="skills" style="background-color: #ffffff;">
+        <h2 class="section-title">What I Do</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Graphic Design</h3>
+                <p>Creating high-impact layouts, branding assets, and digital social media content.</p>
+            </div>
+            <div class="card">
+                <h3>Multimedia Content</h3>
+                <p>Crafting engaging short-form video reels, carousels, and visual presentations.</p>
+            </div>
+            <div class="card">
+                <h3>Digital Solutions</h3>
+                <p>Helping organize workflows, layouts, and keeping projects moving forward smoothly.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="work">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="portfolio-image">Project One Image</div>
+                <h3>Brand Identity Design</h3>
+                <p>A complete visual branding refresh package for a modern business client.</p>
+            </div>
+            <div class="card">
+                <div class="portfolio-image">Project Two Image</div>
+                <h3>Social Media Campaign</h3>
+                <p>A curated series of engaging carousels and high-performance video reels.</p>
+            </div>
+            <div class="card">
+                <div class="portfolio-image">Project Three Image</div>
+                <h3>Visual Presentations</h3>
+                <p>Clean, structured slide decks designed for seamless communication.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" style="background-color: #ffffff; text-align: center;">
+        <h2 class="section-title">Let's Work Together</h2>
+        <p style="margin-bottom: 30px; color: #666;">Have a project in mind or just want to connect? Drop me an email!</p>
+        <a href="mailto:your.email@example.com" class="btn">Send an Email</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Crafted with care. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
